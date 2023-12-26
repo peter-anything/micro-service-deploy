@@ -34,7 +34,7 @@ services:
     restart: always
   nacos3:
     hostname: nacos3
-    image: nacos/nacos-server:${NACOS_VERSION}
+    image: nacos/nacos-server:v2.2.0
     container_name: nacos3
     volumes:
       - ./data/nacos/cluster/nacos3:/home/nacos/logs
