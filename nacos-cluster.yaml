@@ -14,9 +14,6 @@ services:
     env_file:
       - ./env/nacos.env
     restart: always
-    depends_on:
-      mysql:
-        condition: service_healthy
 
   nacos2:
     hostname: nacos2
@@ -46,9 +43,6 @@ services:
     env_file:
       - ./env/nacos.env
     restart: always
-    depends_on:
-      mysql:
-        condition: service_healthy
   mysql:
     container_name: mysql
     image: mysql:5.7
